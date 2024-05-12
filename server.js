@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express()
 const db = require('./db')
+require('dotenv').config();
+
 
 const  MenuItem   = require('./person');
 
@@ -44,6 +46,8 @@ app.get('/hotel', async (req, res)=>{
     res.status(500).json({error: 'Internal server error'})
   }
 })
+
+const PORT = process.env.PORT || 3000;
 
  app.listen(3000, ()=>{
   console.log("Lisetning on port 3000")

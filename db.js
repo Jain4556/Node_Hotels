@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 
 
-const mongoURL = 'mongodb://localhost:27017/hotel'
+// const mongoURL = 'mongodb://localhost:27017/hotel'
+// const mongoURL  = 'mongodb+srv://jain42040:jain42040@cluster0.bs8rawo.mongodb.net/'
 
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
