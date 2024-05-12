@@ -20,7 +20,7 @@ app.post ('/hotel', async (req, res)=>{
     const  data  = req.body
 
     const newMenu = MenuItem(data);
-
+   
 
     const response  =await newMenu.save();
     console.log('data saved');
@@ -40,7 +40,7 @@ app.get('/hotel', async (req, res)=>{
     res.status(200).json(data)
   }
   catch(err){
-    console.log(err)
+    console.log(err) 
     res.status(500).json({error: 'Internal server error'})
   }
 })
@@ -48,3 +48,5 @@ app.get('/hotel', async (req, res)=>{
  app.listen(3000, ()=>{
   console.log("Lisetning on port 3000")
  })
+
+ 
